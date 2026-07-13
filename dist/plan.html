@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10231f" />
+    <meta name="description" content="Plan a Roam trip — tell us where you’re drawn and we’ll reply within 24 hours." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+    <title>Plan a trip — Roam</title>
+    <script type="module" crossorigin src="/assets/style-BuxWRZTv.js"></script>
+    <script type="module" crossorigin src="/assets/site-hQgdvm-y.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/style-Bxdv0GVm.css">
+    <link rel="stylesheet" crossorigin href="/assets/site-euGAvJFE.css">
+  </head>
+  <body>
+    <header class="page-nav">
+      <nav class="nav container">
+        <a class="brand" href="/"><span>R</span>OAM</a>
+        <div class="nav__links" id="nav-links">
+          <a href="/journeys.html">Journeys</a>
+          <a href="/stays.html">Stays</a>
+          <a href="/hosts.html">Hosts</a>
+          <a href="/about.html">About</a>
+          <a href="/stories.html">Stories</a>
+          <a class="nav__cta nav__cta--mobile" href="/plan.html" aria-current="page">Plan a trip <i>↗</i></a>
+        </div>
+        <a class="nav__cta nav__cta--desktop" href="/plan.html" aria-current="page">Plan a trip <i>↗</i></a>
+        <button class="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      </nav>
+    </header>
+
+    <main class="plan-page container">
+      <section class="explore">
+        <div class="explore__copy">
+          <p class="eyebrow">One form. One reply.</p>
+          <h2>Plan your<br /><em>escape.</em></h2>
+          <p class="explore__note">Tell us where you’re drawn — we’ll reply within 24 hours with dates, seats, and an honest fit check.</p>
+        </div>
+        <form class="trip-form" id="trip-form">
+          <label>Your name<input name="name" type="text" required placeholder="Alex Rivera" autocomplete="name" /></label>
+          <label>Email<input name="email" type="email" required placeholder="alex@email.com" autocomplete="email" /></label>
+          <label>Where to wander
+            <select name="where" required>
+              <option value="">Choose a route</option>
+              <option value="Patagonia">Patagonia</option>
+              <option value="Morocco">Morocco</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Cyclades">Cyclades</option>
+              <option value="Dolomites">Dolomites</option>
+              <option value="Anywhere unexpected">Anywhere unexpected</option>
+            </select>
+          </label>
+          <label>When
+            <select name="when" required>
+              <option value="">Choose a season</option>
+              <option>Spring</option>
+              <option>Summer</option>
+              <option>Autumn</option>
+              <option>Winter</option>
+            </select>
+          </label>
+          <button type="submit">Plan a trip <span>→</span></button>
+          <p class="trip-form__ok" hidden>Got it — we’ll write you within 24 hours.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <a class="brand dark" href="/"><span>R</span>OAM</a>
+          <p>Made for the beautifully curious.</p>
+        </div>
+        <div class="site-footer__links">
+          <a href="/journeys.html">Journeys</a>
+          <a href="/stays.html">Stays</a>
+          <a href="/hosts.html">Hosts</a>
+          <a href="/about.html">About</a>
+          <a href="/plan.html">Plan a trip</a>
+        </div>
+        <div class="site-footer__contact">
+          <a href="mailto:hello@roam.travel">hello@roam.travel</a>
+          <a href="https://instagram.com" rel="noopener noreferrer" target="_blank">Instagram</a>
+          <a href="/">Home ↑</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
