@@ -2,8 +2,6 @@ import './style.css';
 import './journey.css';
 import './places.css';
 import './story.css';
-import './energy.css';
-import './energy.js';
 import './footer-reveal.js';
 
 const observer = new IntersectionObserver((entries) => {
