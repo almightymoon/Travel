@@ -24,7 +24,9 @@ if (!lift || !footer) {
   let ticking = false;
 
   function measure() {
-    footerHeight = Math.max(Math.ceil(footer.offsetHeight), Math.round(window.innerHeight * 0.42));
+    // Keep the reveal tight — footer height, not an oversized empty runway.
+    footerHeight = Math.max(Math.ceil(footer.offsetHeight), Math.round(window.innerHeight * 0.28));
+    footerHeight = Math.min(footerHeight, 360);
     document.documentElement.style.setProperty('--footer-h', `${footerHeight}px`);
     runway.style.height = `${footerHeight}px`;
   }
@@ -40,9 +42,15 @@ if (!lift || !footer) {
     const p = progress();
     const ease = 1 - (1 - p) ** 2.4;
 
-    lift.style.transform = `translate3d(0, ${(-48 * ease).toFixed(2)}px, 0) scale(${(1 - 0.04 * ease).toFixed(4)})`;
-    lift.style.setProperty('--lift-radius', `${(64 * ease).toFixed(1)}px`);
-    lift.style.setProperty('--lift-shade', ease.toFixed(3));
+    if (ease < 0.001) {
+      lift.style.transform = 'none';
+      lift.style.setProperty('--lift-radius', '0px');
+      lift.style.setProperty('--lift-shade', '0');
+    } else {
+      lift.style.transform = `translate3d(0, ${(-48 * ease).toFixed(2)}px, 0) scale(${(1 - 0.04 * ease).toFixed(4)})`;
+      lift.style.setProperty('--lift-radius', `${(64 * ease).toFixed(1)}px`);
+      lift.style.setProperty('--lift-shade', ease.toFixed(3));
+    }
     footer.style.setProperty('--footer-pull', ease.toFixed(3));
     footer.classList.toggle('is-in', p > 0.02);
   }
